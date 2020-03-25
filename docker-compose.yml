@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  server:
+    build:
+      context: .
+      target: development
+    tty: true
+    volumes:
+      - ./:/go/src/sample
+    ports:
+      - "9090:9090"
+    # command: air
